@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import aboutUsBanner from "./assets/images/about-banner.jpg";
+
+import GlobalStyle from "./styles/globalStyle";
+
+import {
+  Header,
+  CarouselBanner,
+  IntroBlock,
+  About,
+  ImageBanner,
+  CarouselText,
+  Clients,
+  Solutions,
+  Partners,
+  Testimonials,
+  ContactUs,
+  Footer,
+} from "./components";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <Header />
+      <CarouselBanner />
+      <IntroBlock />
+      <About />
+      <ImageBanner imgSrc={aboutUsBanner} imgAlt="about-contratek" />
+      <CarouselText />
+      <Clients />
+      <Solutions />
+      <Partners />
+      <Testimonials />
+      <ContactUs />
+      <Footer />
+    </>
   );
 }
 
