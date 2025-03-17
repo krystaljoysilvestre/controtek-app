@@ -5,8 +5,12 @@ import { device } from "../../constants/devices";
 export const SwiperContainer = styled.div`
   position: relative;
   background-color: #ff391a;
-  padding: 16 0px;
+  padding: 16px 0px;
   transition: background-color 300ms ease-in-out;
+
+  @media ${device.mobileL} {
+    padding: 40px 0px;
+  }
 
   @media ${device.tablet} {
     padding: 56px 0;
@@ -19,10 +23,10 @@ export const Container = styled.div`
   padding: 0 16px;
 
   @media ${device.tablet} {
-    padding: 0 32px;
+    padding: 0 40px;
   }
 
-  @media (min-width: 1200px) {
+  @media ${device.laptop} {
     padding: 0 56px;
   }
 `;
@@ -38,9 +42,22 @@ export const StyledSwiperSlide = styled(SwiperSlide)``;
 export const SwiperControls = styled.div`
   background: #ffffff;
   position: absolute;
+  top: 330px;
   left: 0;
   z-index: 3;
   display: flex;
+
+  @media ${device.mobileL} {
+    top: 280px;
+  }
+
+  @media ${device.tablet} {
+    top: 330px;
+  }
+
+  @media (min-width: 992px) {
+    top: auto;
+  }
 `;
 
 export const LeftControl = styled.div`
@@ -72,13 +89,15 @@ export const RightControl = styled.div`
 export const Paper = styled.div`
   background: #ffffff;
   display: flex;
+  flex-direction: column;
 
-  @media (min-width: 1200px) {
-    height: 550px;
+  @media (min-width: 992px) {
+    flex-direction: row;
+    height: 450px;
   }
 
-  @media (min-width: 1300px) {
-    height: 600px;
+  @media ${device.laptop} {
+    height: 550px;
   }
 
   @media ${device.laptopL} {
@@ -87,36 +106,65 @@ export const Paper = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: 56px;
+  padding: 40px 16px;
   display: flex;
-  flex-basis: 33%;
   flex-direction: column;
   justify-content: space-between;
+  height: 250px;
+
+  @media ${device.mobileL} {
+    height: 200px;
+  }
+
+  @media ${device.tablet} {
+    padding: 40px;
+    height: 250px;
+  }
+
+  @media (min-width: 992px) {
+    height: auto;
+    flex-basis: 33%;
+  }
+
+  @media ${device.laptop} {
+    padding: 56px;
+  }
 `;
 
 export const Heading = styled.div`
   display: flex;
   gap: 8px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 `;
 
 export const SquareBullet = styled.div`
   width: 8px;
   height: 8px;
-  margin-top: 6px;
+  margin-top: 4px;
   aspect-ratio: 1/1;
+
+  @media ${device.tablet} {
+    margin-top: 6px;
+  }
 `;
 
 export const Title = styled.h4`
   margin: 0;
   color: #000000;
-  font-family: "Funnel Sans", sans-serif;
-  font-size: 16px;
+  font-family: "Funnel Display";
+  font-size: 12px;
+  min-height: 20px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   line-height: normal;
-  letter-spacing: 0.8px;
   text-transform: uppercase;
+  letter-spacing: 0.6px;
+
+  @media ${device.tablet} {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+  }
 `;
 
 export const Background = styled.div`
@@ -125,38 +173,69 @@ export const Background = styled.div`
   flex: 1;
 `;
 
-export const Image = styled.img`
+export const DesktopImage = styled.img`
+  object-fit: cover;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: auto;
-  height: 100%;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: none;
 
-  @media (min-width: 1200px) {
-    width: 100%;
-    height: auto;
-    min-height: 550px;
+  @media (min-width: 992px) {
+    display: block;
+    min-height: 450px;
   }
 
-  @media (min-width: 1300px) {
-    width: 100%;
-    height: auto;
+  @media ${device.laptop} {
     min-height: 550px;
   }
 
   @media ${device.laptopL} {
-    width: auto;
-    height: 682px;
+    min-height: 682px;
+  }
+`;
+
+export const MobileImageContainer = styled.div`
+  position: relative;
+  height: 300px;
+
+  @media ${device.tablet} {
+    height: 400px;
+  }
+
+  @media (min-width: 800px) {
+    height: 450px;
+  }
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+`;
+
+export const MobileImage = styled.img`
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &.building-bg {
+    top: 35%;
   }
 `;
 
 export const Body = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 24px;
 
-  @media (min-width: 1260px) {
+  @media ${device.tablet} {
+    gap: 30px;
+  }
+
+  @media ${device.laptopL} {
     gap: 40px;
   }
 `;
@@ -167,18 +246,23 @@ export const Headline = styled.h1`
   text-edge: cap;
   margin: 0;
   font-family: "Funnel Display", sans-serif;
-  font-size: 42px;
   font-style: normal;
   font-weight: 700;
   line-height: 100%;
-  letter-spacing: -1.12px;
-  max-width: 428px;
+  letter-spacing: -0.8px;
+  font-size: 40px;
 
-  @media (min-width: 1200px) {
+  @media ${device.tablet} {
+    max-width: 428px;
+    font-size: 42px;
+    letter-spacing: -1.12px;
+  }
+
+  @media ${device.laptop} {
     font-size: 48px;
   }
 
-  @media (min-width: 1260px) {
+  @media ${device.laptopL} {
     font-size: 56px;
   }
 `;
@@ -188,17 +272,22 @@ export const Paragraph = styled.div`
   leading-trim: both;
   text-edge: cap;
   font-family: "Funnel Sans", sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 300;
   line-height: 130%;
-  letter-spacing: 0.24px;
+  letter-spacing: 0.14px;
 
-  @media (min-width: 1200px) {
+  @media ${device.tablet} {
+    letter-spacing: 0.24px;
+    font-size: 18px;
+  }
+
+  @media ${device.laptop} {
     font-size: 20px;
   }
 
-  @media (min-width: 1260px) {
+  @media ${device.laptopL} {
     font-size: 24px;
   }
 `;

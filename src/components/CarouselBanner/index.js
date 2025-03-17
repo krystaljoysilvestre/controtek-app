@@ -1,9 +1,14 @@
 import { useRef } from "react";
 import { EffectCreative, Navigation } from "swiper/modules";
+import useIsMobile from "../../hooks/isMobile";
 import manufacturingImg from "../../assets/images/carousel-banner/manufacturing-efficiency.jpg";
+import manufacturingImgSm from "../../assets/images/carousel-banner/manufacturing-efficiency_mobile.jpg";
 import equipmentImg from "../../assets/images/carousel-banner/equipment-efficiency.jpg";
+import equipmentImgSm from "../../assets/images/carousel-banner/equipment-efficiency_mobile.jpg";
 import buildingImg from "../../assets/images/carousel-banner/building.jpg";
+import buildingImgSm from "../../assets/images/carousel-banner/buildings_mobile.jpg";
 import solutionsImg from "../../assets/images/carousel-banner/solutions.jpg";
+import solutionsImgSm from "../../assets/images/carousel-banner/solutions_mobile.jpg";
 import {
   SwiperContainer,
   StyledSwiper,
@@ -16,7 +21,9 @@ import {
   Paper,
   Content,
   Background,
-  Image,
+  DesktopImage,
+  MobileImageContainer,
+  MobileImage,
   Title,
   SquareBullet,
   Heading,
@@ -27,6 +34,7 @@ import {
 
 const CarouselBanner = () => {
   const swiperRef = useRef(null);
+  const isMobile = useIsMobile();
 
   const onSlideChange = (swiper) => {
     const currentSlide = swiper.realIndex;
@@ -88,7 +96,13 @@ const CarouselBanner = () => {
                   </Body>
                 </Content>
                 <Background>
-                  <Image
+                  <MobileImageContainer>
+                    <MobileImage
+                      src={manufacturingImgSm}
+                      alt="Improve your manufacturing efficiency today"
+                    />
+                  </MobileImageContainer>
+                  <DesktopImage
                     src={manufacturingImg}
                     alt="Improve your manufacturing efficiency today"
                   />
@@ -112,10 +126,19 @@ const CarouselBanner = () => {
                   </Body>
                 </Content>
                 <Background>
-                  <Image
-                    src={equipmentImg}
-                    alt="Maximize efficiency with TraceOEE™"
-                  />
+                  {isMobile ? (
+                    <MobileImageContainer>
+                      <MobileImage
+                        src={equipmentImgSm}
+                        alt="Maximize efficiency with TraceOEE™"
+                      />
+                    </MobileImageContainer>
+                  ) : (
+                    <DesktopImage
+                      src={equipmentImg}
+                      alt="Maximize efficiency with TraceOEE™"
+                    />
+                  )}
                 </Background>
               </Paper>
             </StyledSwiperSlide>
@@ -136,10 +159,20 @@ const CarouselBanner = () => {
                   </Body>
                 </Content>
                 <Background>
-                  <Image
-                    src={buildingImg}
-                    alt="Smart and efficient buildings"
-                  />
+                  {isMobile ? (
+                    <MobileImageContainer>
+                      <MobileImage
+                        className="building-bg"
+                        src={buildingImgSm}
+                        alt="Smart and efficient buildings"
+                      />
+                    </MobileImageContainer>
+                  ) : (
+                    <DesktopImage
+                      src={buildingImg}
+                      alt="Smart and efficient buildings"
+                    />
+                  )}
                 </Background>
               </Paper>
             </StyledSwiperSlide>
@@ -160,10 +193,19 @@ const CarouselBanner = () => {
                   </Body>
                 </Content>
                 <Background>
-                  <Image
-                    src={solutionsImg}
-                    alt="Smart and efficient buildings"
-                  />
+                  {isMobile ? (
+                    <MobileImageContainer>
+                      <MobileImage
+                        src={solutionsImgSm}
+                        alt="Smart and efficient buildings"
+                      />
+                    </MobileImageContainer>
+                  ) : (
+                    <DesktopImage
+                      src={solutionsImg}
+                      alt="Smart and efficient buildings"
+                    />
+                  )}
                 </Background>
               </Paper>
             </StyledSwiperSlide>
