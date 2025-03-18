@@ -30,34 +30,32 @@ const Partners = () => {
     <Wrapper>
       <Container>
         <Row>
-          <Container>
-            <Heading>
-              <Title>OUR PARTNERS</Title>
-              <Paragraph>
-                Controtek collaborates with leading technology and service
-                partners to deliver cutting-edge automation solutions.
-              </Paragraph>
-            </Heading>
-            <PartnerLogos>
-              <Beckhoff />
-              <EndressHauser />
-              <HmsEwon />
-              <AdelSystem />
-              <SPM />
-              <Wieland />
-              <Weintek />
-              <Accuenergy />
-              <LundHalsey />
-              <TekpanRolec />
-              <Danfoss />
-              <Paloalto />
-              <Fortinet />
-              <Ignition />
-              <Sepasoft />
-              <Fiix />
-              <Plex />
-            </PartnerLogos>
-          </Container>
+          <Heading>
+            <Title>OUR PARTNERS</Title>
+            <Paragraph>
+              Controtek collaborates with leading technology and service
+              partners to deliver cutting-edge automation solutions.
+            </Paragraph>
+          </Heading>
+          <PartnerLogos>
+            <Beckhoff />
+            <EndressHauser />
+            <HmsEwon />
+            <AdelSystem />
+            <SPM />
+            <Wieland />
+            <Weintek />
+            <Accuenergy />
+            <LundHalsey />
+            <TekpanRolec />
+            <Danfoss />
+            <Paloalto />
+            <Fortinet />
+            <Ignition />
+            <Sepasoft />
+            <Fiix />
+            <Plex />
+          </PartnerLogos>
         </Row>
       </Container>
     </Wrapper>

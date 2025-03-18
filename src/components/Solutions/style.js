@@ -95,14 +95,16 @@ export const SolutionItem = styled.div`
 
   @media ${device.mobileL} {
     gap: 24px;
-    width: calc(50% - 16px);
+    width: calc(50% - 28px);
     font-size: 14px;
+    padding-right: 12px;
     letter-spacing: 0.14px;
   }
 
   @media ${device.tablet} {
     gap: 24px;
-    width: calc(33.33% - 16px);
+    width: calc(33.33% - 48px);
+    padding-right: 24px;
     font-size: 14px;
     letter-spacing: 0.14px;
   }
