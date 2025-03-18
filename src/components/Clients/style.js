@@ -49,15 +49,18 @@ export const Title = styled.h4`
   margin: 0;
   margin-bottom: 24px;
   font-family: "Funnel Display";
-  font-size: 16px;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
-  letter-spacing: 0.8px;
   text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
 
   @media ${device.tablet} {
     margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
   }
 `;
 
@@ -65,12 +68,18 @@ export const Paragraph = styled.p`
   margin: 0;
   color: #000000;
   font-family: "Funnel Sans";
-  font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
-  letter-spacing: 0.16px;
+  font-size: 12px;
+  font-style: normal;
+  letter-spacing: 0.12px;
   max-width: 344px;
+
+  @media ${device.tablet} {
+    font-size: 16px;
+
+    letter-spacing: 0.16px;
+  }
 `;
 
 export const ClientLogos = styled.div`

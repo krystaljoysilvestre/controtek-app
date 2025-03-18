@@ -87,7 +87,7 @@ const Solutions = () => {
                   <SolutionItem>
                     <div>
                       <Label>
-                        <SquareBullet style={{ background: "##52E2C8" }} />
+                        <SquareBullet style={{ background: "#52E2C8" }} />
                         <Name>Autek®</Name>
                       </Label>
                       <Type>Smarter Automation</Type>
