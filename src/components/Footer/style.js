@@ -1,7 +1,16 @@
 import styled from "styled-components";
+import { device } from "../../constants/devices";
 
 export const Container = styled.div`
-  padding: 0 56px;
+  padding: 0 16px;
+
+  @media ${device.tablet} {
+    padding: 0 40px;
+  }
+
+  @media ${device.laptop} {
+    padding: 0 56px;
+  }
 `;
 
 export const FluidRow = styled.div`
@@ -11,27 +20,53 @@ export const FluidRow = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: 56px 0;
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
-  gap: 56px;
+  gap: 32px;
+
+  @media ${device.tablet} {
+    padding: 40px;
+  }
+
+  @media ${device.laptop} {
+    gap: 56px;
+    padding: 56px;
+  }
 `;
 
 export const BrandLogo = styled.div`
   svg {
     display: block;
+    height: 36px;
+    width: auto;
+  }
+
+  @media ${device.tablet} {
+    svg {
+      display: block;
+      height: 40px;
+    }
   }
 `;
 
 export const Row = styled.div`
   display: flex;
+  flex-direction: column;
   gap: 24px;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+    gap: 32px;
+  }
 `;
 
 export const Column = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+  gap: 24px;
+  justify-content: space-between;
 
   p {
     max-width: 350px;
@@ -43,6 +78,34 @@ export const Column = styled.div`
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.14px;
+  }
+
+  .email {
+    margin-top: -20px;
+  }
+
+  @media ${device.tablet} {
+    .email {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 991px) {
+    p {
+      max-width: 250px;
+    }
+  }
+
+  @media ${device.laptop} {
+    p {
+      max-width: 300px;
+    }
+  }
+
+  @media ${device.laptopL} {
+    p {
+      max-width: 350px;
+    }
   }
 `;
 
@@ -62,6 +125,7 @@ export const Title = styled.h4`
 export const Bottom = styled.div`
   background: #ff391a;
   position: relative;
+  overflow-x: hidden;
 `;
 
 export const BottomLogoContainer = styled.div`
@@ -84,7 +148,7 @@ export const BottomLogoContainer = styled.div`
 
 export const BottomContent = styled.div`
   display: flex;
-  height: 87.5px;
+  height: 50px;
   justify-content: space-between;
   align-items: center;
   color: #ffffff;
@@ -94,7 +158,18 @@ export const BottomContent = styled.div`
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.14px;
-  width: 100%;
+
+  @media ${device.tablet} {
+    padding: 0 40px;
+  }
+
+  @media (min-width: 991px) {
+    height: 87.5px;
+  }
+
+  @media ${device.laptop} {
+    padding: 0 56px;
+  }
 `;
 
 export const Copyright = styled.div`
@@ -108,8 +183,12 @@ export const Copyright = styled.div`
 `;
 
 export const Links = styled.div`
-  display: flex;
-  gap: 40px;
+  display: none;
+
+  @media ${device.laptop} {
+    display: flex;
+    gap: 40px;
+  }
 `;
 
 export const Link = styled.a`
