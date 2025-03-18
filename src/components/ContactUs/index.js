@@ -35,7 +35,7 @@ const ContactUs = () => {
   }, []);
 
   return (
-    <Wrapper>
+    <Wrapper id="contact">
       <Container>
         <Row>
           <Paper>

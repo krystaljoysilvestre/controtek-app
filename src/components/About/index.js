@@ -15,7 +15,7 @@ import {
 
 const About = () => {
   return (
-    <Wrapper>
+    <Wrapper id="about">
       <Container>
         <Row>
           <Paper>

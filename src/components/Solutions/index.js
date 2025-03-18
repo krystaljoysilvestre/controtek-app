@@ -22,7 +22,7 @@ const Solutions = () => {
 
   return (
     <>
-      <Wrapper>
+      <Wrapper id="solutions">
         <Container>
           <Row>
             <Paper>
