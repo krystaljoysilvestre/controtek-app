@@ -12,8 +12,6 @@ import {
   BottomLogoContainer,
   BottomContent,
   Copyright,
-  Links,
-  Link,
 } from "./style";
 
 const Footer = () => {
@@ -72,11 +70,6 @@ const Footer = () => {
               <Copyright>
                 © 2025 Controtek Solutions, All rights reserved
               </Copyright>
-              <Links>
-                <Link>Privacy Policy</Link>
-                <Link>Cookie Policy</Link>
-                <Link>Terms & Conditions</Link>
-              </Links>
             </BottomContent>
           </FluidRow>
         </Container>
