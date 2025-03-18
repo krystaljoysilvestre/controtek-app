@@ -1,4 +1,6 @@
-import contactUsBg from "../../assets/images/contact-us.jpg";
+import { useState, useEffect } from "react";
+import contactUsBg from "../../assets/images/contact-us_desktop.jpg";
+import contactUsBgSm from "../../assets/images/contact-us_mobile.jpg";
 import Button from "../Button";
 import {
   Wrapper,
@@ -18,6 +20,20 @@ import {
 } from "./style";
 
 const ContactUs = () => {
+  const [isLargeBanner, setIsLargeBanner] = useState(window.innerWidth >= 1440);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeBanner(window.innerWidth >= 1440);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <Wrapper>
       <Container>
@@ -53,7 +69,11 @@ const ContactUs = () => {
               </Form>
             </Content>
             <Background>
-              <Image src={contactUsBg} alt="Contact us" />
+              {isLargeBanner ? (
+                <Image src={contactUsBg} alt="Contact us" />
+              ) : (
+                <Image src={contactUsBgSm} alt="Contact us" />
+              )}
             </Background>
           </Paper>
         </Row>
