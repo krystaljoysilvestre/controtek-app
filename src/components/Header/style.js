@@ -69,6 +69,7 @@ export const Brand = styled.div`
 export const Link = styled.a`
   border: none;
   cursor: pointer;
+  text-decoration: none;
 `;
 
 export const DesktopNav = styled.div`

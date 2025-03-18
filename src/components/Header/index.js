@@ -18,7 +18,7 @@ const Header = () => {
     <Wrapper>
       <Content>
         <Brand>
-          <Link href="https://controtek.com/">
+          <Link href="/">
             <Logo className="brand-logo" />
             <Name className="brand-name" />
           </Link>
@@ -27,7 +27,9 @@ const Header = () => {
           <Nav />
         </DesktopNav>
         <DesktopActions>
-          <Button>Request a demo</Button>
+          <Link href="#contact">
+            <Button>Request a demo</Button>
+          </Link>
         </DesktopActions>
         <MobileActions>
           <MenuIcon />
