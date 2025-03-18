@@ -1,9 +1,18 @@
+import aboutUsBanner from "../../assets/images/about-banner.jpg";
+import aboutUsBannerSm from "../../assets/images/about-banner_mobile.jpg";
+import useIsMobile from "../../hooks/isMobile";
 import { Wrapper, Image } from "./style";
 
-const ImageBanner = ({ imgSrc, imgAlt }) => {
+const ImageBanner = () => {
+  const isMobile = useIsMobile();
+
   return (
     <Wrapper>
-      <Image src={imgSrc} alt={imgAlt} />
+      {isMobile ? (
+        <Image src={aboutUsBannerSm} alt="About us" />
+      ) : (
+        <Image src={aboutUsBanner} alt="About us" />
+      )}
     </Wrapper>
   );
 };

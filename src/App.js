@@ -1,4 +1,3 @@
-import aboutUsBanner from "./assets/images/about-banner.jpg";
 import useIsMobile from "./hooks/isMobile";
 import GlobalStyle from "./styles/globalStyle";
 
@@ -30,7 +29,7 @@ function App() {
         <>
           <Clients />
           <About />
-          <ImageBanner imgSrc={aboutUsBanner} imgAlt="about-contratek" />
+          <ImageBanner />
           <CarouselText />
           <Solutions />
           <Partners />
@@ -40,7 +39,7 @@ function App() {
       ) : (
         <>
           <About />
-          <ImageBanner imgSrc={aboutUsBanner} imgAlt="about-contratek" />
+          <ImageBanner />
           <CarouselText />
           <Clients />
           <Solutions />

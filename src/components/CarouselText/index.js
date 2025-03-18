@@ -29,7 +29,6 @@ const CarouselText = () => {
     <SwiperContainer>
       <StyledSwiper
         loop={true}
-        speed={250}
         effect={"fade"}
         navigation={{
           prevEl: ".carousel-text-prev",
