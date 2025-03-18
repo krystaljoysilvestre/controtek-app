@@ -24,7 +24,7 @@ const Solutions = () => {
             <Paper>
               <Container>
                 <Heading>
-                  <Title>Our clients</Title>
+                  <Title>Our solutions</Title>
                 </Heading>
                 <SolutionItems>
                   <SolutionItem>

@@ -41,44 +41,42 @@ const Clients = () => {
     <Wrapper>
       <Container>
         <Row>
-          <Container>
-            <Heading>
-              <Title>Our clients</Title>
-              <Paragraph>
-                Our powerful client portfolio includes food & beverage, water &
-                waste water, utilities, power and energy sectors.
-              </Paragraph>
-            </Heading>
-            <ClientLogos>
-              <Mondelez />
-              <Nestle />
-              <Wyeth />
-              <Unilever />
-              <CocaCola />
-              <Pepsi />
-              <Energy />
-              <SanMiguelCorp />
-              <MeadJohnson />
-              <Dole />
-              <Alaska />
-              <MondeNissin />
-              <Friesland />
-              <SMPrime />
-              <Indorama />
-              <Tosoh />
-              <DonPedro />
-              <DeLaCarlota />
-              <Mariwasa />
-              <Bataan />
-              <Continental />
-              <Aboitiz />
-              <THPal />
-              <NGCP />
-              <LagunaWater />
-              <ManilaWater />
-              <PSC />
-            </ClientLogos>
-          </Container>
+          <Heading>
+            <Title>Our clients</Title>
+            <Paragraph>
+              Our powerful client portfolio includes food & beverage, water &
+              waste water, utilities, power and energy sectors.
+            </Paragraph>
+          </Heading>
+          <ClientLogos>
+            <Mondelez />
+            <Nestle />
+            <Wyeth />
+            <Unilever />
+            <CocaCola />
+            <Pepsi />
+            <Energy />
+            <SanMiguelCorp />
+            <MeadJohnson />
+            <Dole />
+            <Alaska />
+            <MondeNissin />
+            <Friesland />
+            <SMPrime />
+            <Indorama />
+            <Tosoh />
+            <DonPedro />
+            <DeLaCarlota />
+            <Mariwasa />
+            <Bataan />
+            <Continental />
+            <Aboitiz />
+            <THPal />
+            <NGCP />
+            <LagunaWater />
+            <ManilaWater />
+            <PSC />
+          </ClientLogos>
         </Row>
       </Container>
     </Wrapper>

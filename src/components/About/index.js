@@ -1,4 +1,5 @@
 import aboutBg from "../../assets/images/about.jpg";
+import aboutBgSm from "../../assets/images/about_mobile.jpg";
 import {
   Wrapper,
   Container,
@@ -7,7 +8,9 @@ import {
   Content,
   Title,
   Background,
-  Image,
+  DesktopImage,
+  MobileImageContainer,
+  MobileImage,
 } from "./style";
 
 const About = () => {
@@ -37,6 +40,13 @@ const About = () => {
                 Backed by experts, we provide scalable solutions from
                 machine-level control to full industrial integration.
               </p>
+              <MobileImageContainer>
+                <MobileImage
+                  src={aboutBgSm}
+                  alt="About Contratek"
+                  loading="lazy"
+                />
+              </MobileImageContainer>
               <p>
                 Beyond automation, our innovations also impact lives by making
                 workplaces safer, reducing risks, and improving daily
@@ -51,7 +61,11 @@ const About = () => {
               </p>
             </Content>
             <Background>
-              <Image src={aboutBg} alt="about-us" loading="lazy" />
+              <DesktopImage
+                src={aboutBg}
+                alt="About Contratek"
+                loading="lazy"
+              />
             </Background>
           </Paper>
         </Row>

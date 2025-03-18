@@ -1,5 +1,5 @@
 import aboutUsBanner from "./assets/images/about-banner.jpg";
-
+import useIsMobile from "./hooks/isMobile";
 import GlobalStyle from "./styles/globalStyle";
 
 import {
@@ -18,20 +18,37 @@ import {
 } from "./components";
 
 function App() {
+  const isMobile = useIsMobile();
+
   return (
     <>
       <GlobalStyle />
       <Header />
       <CarouselBanner />
       <IntroBlock />
-      <About />
-      <ImageBanner imgSrc={aboutUsBanner} imgAlt="about-contratek" />
-      <CarouselText />
-      <Clients />
-      <Solutions />
-      <Partners />
-      <Testimonials />
-      <ContactUs />
+      {isMobile ? (
+        <>
+          <Clients />
+          <About />
+          <ImageBanner imgSrc={aboutUsBanner} imgAlt="about-contratek" />
+          <CarouselText />
+          <Solutions />
+          <Partners />
+          <Testimonials />
+          <ContactUs />
+        </>
+      ) : (
+        <>
+          <About />
+          <ImageBanner imgSrc={aboutUsBanner} imgAlt="about-contratek" />
+          <CarouselText />
+          <Clients />
+          <Solutions />
+          <Partners />
+          <Testimonials />
+          <ContactUs />
+        </>
+      )}
       <Footer />
     </>
   );
