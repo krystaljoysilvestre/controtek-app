@@ -1,5 +1,5 @@
-import aboutBg from "../../assets/images/about.jpg";
-import aboutBgSm from "../../assets/images/about_mobile.jpg";
+import aboutBg from "../../assets/images/about-us_desktop.jpg";
+import aboutBgSm from "../../assets/images/about-us_mobile.jpg";
 import {
   Wrapper,
   Container,

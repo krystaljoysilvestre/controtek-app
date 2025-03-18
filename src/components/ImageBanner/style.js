@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { device } from "../../constants/devices";
 
 export const Wrapper = styled.div`
-  max-height: 350px;
+  max-height: 380px;
   overflow: hidden;
 
   @media (min-width: 991px) {
@@ -10,12 +10,12 @@ export const Wrapper = styled.div`
     max-height: 100%;
   }
 
-  @media (min-width: 1050px) {
+  @media ${device.laptop} {
     height: 350px;
   }
 
-  @media ${device.laptop} {
-    height: auto;
+  @media ${device.laptopL} {
+    height: 400px;
   }
 `;
 
@@ -24,6 +24,7 @@ export const Image = styled.img`
   width: 100%;
   height: auto;
   position: relative;
+  margin-bottom: -1px;
 
   @media (min-width: 991px) {
     position: absolute;
@@ -31,18 +32,11 @@ export const Image = styled.img`
     width: auto;
   }
 
-  @media (min-width: 1050px) {
-    height: 350px;
-  }
-
   @media ${device.laptop} {
-    position: relative;
-    height: auto;
-    width: 100%;
+    height: 350px;
   }
 
   @media ${device.laptopL} {
     height: 400px;
-    width: auto;
   }
 `;

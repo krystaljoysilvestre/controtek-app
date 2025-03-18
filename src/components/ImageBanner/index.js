@@ -1,5 +1,5 @@
-import aboutUsBanner from "../../assets/images/about-banner.jpg";
-import aboutUsBannerSm from "../../assets/images/about-banner_mobile.jpg";
+import aboutUsBanner from "../../assets/images/about-banner_desktop.jpg";
+import aboutUsBannerSm from "../../assets/images/about-banner1_mobile.jpg";
 import useIsMobile from "../../hooks/isMobile";
 import { Wrapper, Image } from "./style";
 

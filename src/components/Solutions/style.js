@@ -157,12 +157,53 @@ export const Type = styled.h4`
 `;
 
 export const Banner = styled.div`
-  height: 400px;
   background: #52e2c8;
+  position: relative;
+  overflow: hidden;
+  max-height: 380px;
+  display: flex;
+  flex-direction: column;
 
   img {
-    height: 400px;
-    width: auto;
     display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .gap-cover {
+    border-top: 1px solid #52e2c8;
+    position: absolute;
+    height: 50px;
+    width: 100%;
+  }
+
+  @media (min-width: 991px) {
+    height: 300px;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: auto;
+      object-fit: cover;
+      height: 301px;
+      width: auto;
+    }
+  }
+
+  @media ${device.laptop} {
+    height: 350px;
+
+    img {
+      height: 351px;
+    }
+  }
+
+  @media ${device.laptopL} {
+    height: 400px;
+
+    img {
+      height: 401px;
+    }
   }
 `;

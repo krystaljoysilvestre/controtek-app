@@ -96,16 +96,19 @@ const CarouselBanner = () => {
                   </Body>
                 </Content>
                 <Background>
-                  <MobileImageContainer>
-                    <MobileImage
-                      src={manufacturingImgSm}
+                  {isMobile ? (
+                    <MobileImageContainer>
+                      <MobileImage
+                        src={manufacturingImgSm}
+                        alt="Improve your manufacturing efficiency today"
+                      />
+                    </MobileImageContainer>
+                  ) : (
+                    <DesktopImage
+                      src={manufacturingImg}
                       alt="Improve your manufacturing efficiency today"
                     />
-                  </MobileImageContainer>
-                  <DesktopImage
-                    src={manufacturingImg}
-                    alt="Improve your manufacturing efficiency today"
-                  />
+                  )}
                 </Background>
               </Paper>
             </StyledSwiperSlide>

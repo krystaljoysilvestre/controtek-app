@@ -1,4 +1,6 @@
-import solutionsBanner from "../../assets/images/solutions-banner.jpg";
+import solutionsBanner from "../../assets/images/solutions-banner_desktop.jpg";
+import solutionsBannerSm from "../../assets/images/solutions-banner_mobile.jpg";
+import useIsMobile from "../../hooks/isMobile";
 import {
   Wrapper,
   Container,
@@ -16,6 +18,8 @@ import {
 } from "./style";
 
 const Solutions = () => {
+  const isMobile = useIsMobile();
+
   return (
     <>
       <Wrapper>
@@ -119,7 +123,14 @@ const Solutions = () => {
         </Container>
       </Wrapper>
       <Banner>
-        <img src={solutionsBanner} alt="solutions-contratek" />
+        {isMobile ? (
+          <>
+            <div class="gap-cover" />
+            <img src={solutionsBannerSm} alt="solutions-contratek" />
+          </>
+        ) : (
+          <img src={solutionsBanner} alt="solutions-contratek" />
+        )}
       </Banner>
     </>
   );
