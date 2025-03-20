@@ -45,6 +45,7 @@ function App() {
     <>
       <GlobalStyle />
       <Swiper
+        simulateTouch={false}
         slidesPerView="auto"
         resistanceRatio={0}
         slideToClickedSlide={true}
