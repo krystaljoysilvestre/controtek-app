@@ -45,7 +45,7 @@ const ContactUs = () => {
 
     try {
       const response = await fetch(
-        "https://controtek-app-9zmi-5cgi5qgv7-krystal-joy-silvestres-projects.vercel.app:8000/save-contact",
+        "https://controtek-app.vercel.app:8000/save-contact",
         {
           method: "POST",
           headers: {

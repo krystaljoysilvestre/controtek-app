@@ -13,8 +13,7 @@ const dbName = process.env.DB_NAME;
 
 app.use(
   cors({
-    origin:
-      "https://controtek-app-9zmi-5cgi5qgv7-krystal-joy-silvestres-projects.vercel.app",
+    origin: "https://controtek-app.vercel.app",
   })
 );
 app.use(express.json());
