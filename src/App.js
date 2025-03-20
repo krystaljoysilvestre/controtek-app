@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { device } from "./constants/devices";
 import useIsMobile from "./hooks/isMobile";
 import GlobalStyle from "./styles/globalStyle";
 
@@ -24,6 +25,10 @@ const SidebarContainer = styled(SwiperSlide)`
   width: 70%;
   max-width: 320px;
   min-width: 100px;
+
+  @media ${device.tablet} {
+    display: none;
+  }
 `;
 
 function App() {
