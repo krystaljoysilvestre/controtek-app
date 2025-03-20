@@ -125,7 +125,7 @@ const Solutions = () => {
       <Banner>
         {isMobile ? (
           <>
-            <div class="gap-cover" />
+            <div className="gap-cover" />
             <img src={solutionsBannerSm} alt="solutions-contratek" />
           </>
         ) : (

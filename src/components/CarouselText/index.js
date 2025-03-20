@@ -28,6 +28,7 @@ const CarouselText = () => {
   return (
     <SwiperContainer>
       <StyledSwiper
+        grabCursor={true}
         loop={true}
         effect={"fade"}
         navigation={{

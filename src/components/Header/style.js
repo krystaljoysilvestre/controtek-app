@@ -97,7 +97,7 @@ export const DesktopActions = styled.div`
 `;
 
 export const MobileActions = styled.div`
-  display: block;
+  display: flex;
   margin-right: 16px;
 
   svg {
@@ -106,5 +106,47 @@ export const MobileActions = styled.div`
 
   @media ${device.tablet} {
     display: none;
+  }
+`;
+
+export const MenuButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 16px;
+  width: 24px;
+  padding: 3px 0;
+  cursor: pointer;
+  -webkit-transition: 0.08s;
+  transition: 0.08s;
+  z-index: 9;
+
+  div {
+    position: relative;
+    display: block;
+    width: 19px;
+    height: 2px;
+    background: #000000;
+    -webkit-transition: 0.08s;
+    transition: 0.08s;
+  }
+
+  &.cross {
+    div:nth-of-type(1) {
+      -webkit-transform: translateY(7px) rotate(-45deg);
+      -ms-transform: translateY(7px) rotate(-45deg);
+      transform: translateY(7px) rotate(-45deg);
+    }
+
+    div:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    div:nth-of-type(3) {
+      -webkit-transform: translateY(-7px) rotate(45deg);
+      -ms-transform: translateY(-7px) rotate(45deg);
+      transform: translateY(-7px) rotate(45deg);
+    }
   }
 `;

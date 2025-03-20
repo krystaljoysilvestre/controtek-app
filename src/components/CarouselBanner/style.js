@@ -250,7 +250,11 @@ export const Headline = styled.h1`
   font-weight: 700;
   line-height: 100%;
   letter-spacing: -0.8px;
-  font-size: 40px;
+  font-size: 32px;
+
+  @media ${device.mobileM} {
+    font-size: 40px;
+  }
 
   @media ${device.tablet} {
     max-width: 428px;

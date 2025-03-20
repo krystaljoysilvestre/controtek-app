@@ -1,6 +1,5 @@
 import { ReactComponent as Logo } from "../../assets/images/controtek-logo.svg";
 import { ReactComponent as Name } from "../../assets/images/controtek-logo-label.svg";
-import { ReactComponent as MenuIcon } from "../../assets/images/icons/menu-line.svg";
 
 import { Button, Nav } from "../../components";
 import {
@@ -11,31 +10,41 @@ import {
   DesktopNav,
   DesktopActions,
   MobileActions,
+  MenuButton,
 } from "./style";
 
-const Header = () => {
+const Header = ({ isSidebarOpen, onToggleSidebar }) => {
   return (
-    <Wrapper>
-      <Content>
-        <Brand>
-          <Link href="/">
-            <Logo className="brand-logo" />
-            <Name className="brand-name" />
-          </Link>
-        </Brand>
-        <DesktopNav>
-          <Nav />
-        </DesktopNav>
-        <DesktopActions>
-          <Link href="#contact">
-            <Button>Request a demo</Button>
-          </Link>
-        </DesktopActions>
-        <MobileActions>
-          <MenuIcon />
-        </MobileActions>
-      </Content>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Content>
+          <Brand>
+            <Link href="/">
+              <Logo className="brand-logo" />
+              <Name className="brand-name" />
+            </Link>
+          </Brand>
+          <DesktopNav>
+            <Nav />
+          </DesktopNav>
+          <DesktopActions>
+            <Link href="#contact">
+              <Button>Request a demo</Button>
+            </Link>
+          </DesktopActions>
+          <MobileActions>
+            <MenuButton
+              className={isSidebarOpen ? "cross" : ""}
+              onClick={onToggleSidebar}
+            >
+              <div />
+              <div />
+              <div />
+            </MenuButton>
+          </MobileActions>
+        </Content>
+      </Wrapper>
+    </>
   );
 };
 

@@ -39,8 +39,9 @@ const Footer = () => {
                 <div>
                   <Title>MANILA</Title>
                   <p>
-                    29F Parkway Corporate Center Corporate Ave. cor. Parkway
-                    Place, Filinvest City, Alabang, Muntinlupa, Philippines 1781
+                    29F Parkway Corporate Center <br /> Corporate Ave. cor.
+                    Parkway Place, Filinvest City, Alabang, Muntinlupa,
+                    Philippines 1781
                   </p>
                 </div>
                 <div>
@@ -50,7 +51,10 @@ const Footer = () => {
               <Column>
                 <div>
                   <Title>Singapore</Title>
-                  <p>18 Boon Lay Way #07-146 Tradehub 21, Singapore 609966</p>
+                  <p>
+                    18 Boon Lay Way #07-146 <br />
+                    Tradehub 21, Singapore 609966
+                  </p>
                 </div>
                 <div className="email">
                   <p>sales.sg@controtek.com</p>

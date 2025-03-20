@@ -1,6 +1,7 @@
 export { default as Header } from "./Header";
 export { default as Button } from "./Button";
 export { default as Nav } from "./Nav";
+export { default as Sidebar } from "./Sidebar";
 export { default as CarouselBanner } from "./CarouselBanner";
 export { default as IntroBlock } from "./IntroBlock";
 export { default as About } from "./About";

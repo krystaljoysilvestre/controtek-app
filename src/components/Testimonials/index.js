@@ -38,13 +38,14 @@ const Testimonials = () => {
         </svg>
       </TestimonialsIcon>
       <StyledSwiper
+        grabCursor={true}
         loop={true}
         effect={"fade"}
         navigation={{
           prevEl: ".testimonials-prev",
           nextEl: ".testimonials-next",
         }}
-        speed={150}
+        speed={120}
         modules={[EffectFade, Navigation]}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;

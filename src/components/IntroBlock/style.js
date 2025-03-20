@@ -72,7 +72,7 @@ export const Headline = styled.h1`
   font-size: 40px;
 
   @media ${device.tablet} {
-    max-width: 428px;
+    max-width: 584px;
     font-size: 42px;
     letter-spacing: -1.12px;
   }

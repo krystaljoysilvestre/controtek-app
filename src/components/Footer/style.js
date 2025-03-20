@@ -25,13 +25,8 @@ export const Content = styled.div`
   flex-direction: column;
   gap: 32px;
 
-  @media ${device.tablet} {
-    padding: 40px;
-  }
-
   @media ${device.laptop} {
     gap: 56px;
-    padding: 56px;
   }
 `;
 
