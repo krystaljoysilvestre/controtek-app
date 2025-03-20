@@ -21,6 +21,10 @@ import {
 
 const ContactUs = () => {
   const [isLargeBanner, setIsLargeBanner] = useState(window.innerWidth >= 1440);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [contactNo, setContactNo] = useState("");
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,6 +38,30 @@ const ContactUs = () => {
     };
   }, []);
 
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = { name, email, contactNo, message };
+
+    try {
+      const response = await fetch(
+        "https://controtek-app-9zmi-5cgi5qgv7-krystal-joy-silvestres-projects.vercel.app:8000/save-contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      const result = await response.json();
+      console.log(result);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
   return (
     <Wrapper id="contact">
       <Container>
@@ -46,25 +74,45 @@ const ContactUs = () => {
                 Contact us to learn more about innovative, scalable solutions
                 tailored to your industry.
               </Paragraph>
-              <Form>
+              <Form onSubmit={onSubmit}>
                 <FormItem>
-                  <TextField type="text" name="name" placeholder="Name" />
+                  <TextField
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
                 </FormItem>
                 <FormItem>
-                  <TextField type="email" name="email" placeholder="Email" />
+                  <TextField
+                    type="email"
+                    name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Email"
+                  />
                 </FormItem>
                 <FormItem>
                   <TextField
                     type="text"
                     name="contactNumber"
                     placeholder="Contact number"
+                    value={contactNo}
+                    onChange={(e) => setContactNo(e.target.value)}
                   />
                 </FormItem>
                 <FormItem>
-                  <TextArea rows="3" name="message" placeholder="Message" />
+                  <TextArea
+                    rows="3"
+                    name="message"
+                    placeholder="Message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
                 </FormItem>
                 <FormAction>
-                  <Button>Send</Button>
+                  <Button type="submit">Send</Button>
                 </FormAction>
               </Form>
             </Content>
