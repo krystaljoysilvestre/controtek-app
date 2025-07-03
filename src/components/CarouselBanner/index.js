@@ -48,12 +48,12 @@ const CarouselBanner = () => {
       bgColor = "#52E2C8";
     }
 
-    const container = document.getElementById("carouse-banner-container");
+    const container = document.getElementById("carousel-banner-container");
     container.style.backgroundColor = bgColor;
   };
 
   return (
-    <SwiperContainer id="carouse-banner-container">
+    <SwiperContainer id="carousel-banner-container">
       <Container>
         <Row>
           <StyledSwiper

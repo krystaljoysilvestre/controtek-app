@@ -70,6 +70,7 @@ export const Link = styled.a`
   border: none;
   cursor: pointer;
   text-decoration: none;
+  width: fit-content;
 `;
 
 export const DesktopNav = styled.div`

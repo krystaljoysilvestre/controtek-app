@@ -8,7 +8,7 @@ import GlobalStyle from "./styles/globalStyle";
 import {
   Header,
   Sidebar,
-  CarouselBanner,
+  HeroBanner,
   IntroBlock,
   About,
   ImageBanner,
@@ -66,7 +66,7 @@ function App() {
             isSidebarOpen={isSidebarOpen}
             onToggleSidebar={onToggleSidebar}
           />
-          <CarouselBanner />
+          <HeroBanner />
           <Solutions />
           <Clients />
           <IntroBlock />

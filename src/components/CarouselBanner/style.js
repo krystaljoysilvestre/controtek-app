@@ -55,7 +55,7 @@ export const SwiperControls = styled.div`
     top: 330px;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 1px) {
     top: auto;
   }
 `;
@@ -91,7 +91,7 @@ export const Paper = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 992px) {
+  @media (min-width: 991px) {
     flex-direction: row;
     height: 450px;
   }
@@ -121,7 +121,7 @@ export const Content = styled.div`
     height: 250px;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 991px) {
     height: auto;
     flex-basis: 33%;
   }
@@ -182,7 +182,7 @@ export const DesktopImage = styled.img`
   height: auto;
   display: none;
 
-  @media (min-width: 992px) {
+  @media (min-width: 991px) {
     display: block;
     min-height: 450px;
   }
@@ -208,7 +208,7 @@ export const MobileImageContainer = styled.div`
     height: 450px;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 991px) {
     display: none;
   }
 `;
