@@ -142,7 +142,7 @@ export const Container = styled.div`
 `;
 
 export const Row = styled.div`
-  max-width: 1328px;
+  max-width: 1330px;
   margin: 0 auto;
   position: relative;
 `;

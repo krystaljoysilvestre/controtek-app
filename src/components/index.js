@@ -9,6 +9,7 @@ export { default as ImageBanner } from "./ImageBanner";
 export { default as CarouselText } from "./CarouselText";
 export { default as Clients } from "./Clients";
 export { default as Solutions } from "./Solutions";
+export { default as SolutionsTabs } from "./SolutionsTabs";
 export { default as Partners } from "./Partners";
 export { default as Testimonials } from "./Testimonials";
 export { default as ContactUs } from "./ContactUs";
