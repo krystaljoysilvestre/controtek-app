@@ -151,6 +151,9 @@ export const FormItem = styled.div`
 
 export const FormAction = styled.div`
   margin-top: 8px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
 `;
 
 export const TextField = styled.input`
@@ -193,3 +196,15 @@ export const TextArea = styled.textarea`
 `;
 
 export const Button = styled.button``;
+
+export const Success = styled.div`
+  color: #707070;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Funnel Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+`;

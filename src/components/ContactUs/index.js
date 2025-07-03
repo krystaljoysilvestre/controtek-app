@@ -17,6 +17,7 @@ import {
   FormAction,
   TextField,
   TextArea,
+  // Success,
 } from "./style";
 
 const ContactUs = () => {
@@ -113,6 +114,7 @@ const ContactUs = () => {
                 </FormItem>
                 <FormAction>
                   <Button type="submit">Send</Button>
+                  {/* <Success>Sent succesfully!</Success> */}
                 </FormAction>
               </Form>
             </Content>
