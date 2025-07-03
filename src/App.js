@@ -19,7 +19,6 @@ import {
   Testimonials,
   ContactUs,
   Footer,
-  SolutionsTabs,
 } from "./components";
 
 const SidebarContainer = styled(SwiperSlide)`
@@ -68,15 +67,14 @@ function App() {
             onToggleSidebar={onToggleSidebar}
           />
           <CarouselBanner />
-          <SolutionsTabs />
+          <Solutions />
+          <Clients />
           <IntroBlock />
           {isMobile ? (
             <>
-              <Clients />
               <About />
               <ImageBanner />
               <CarouselText />
-              <Solutions />
               <Partners />
               <Testimonials />
               <ContactUs />
@@ -86,8 +84,7 @@ function App() {
               <About />
               <ImageBanner />
               <CarouselText />
-              <Clients />
-              <Solutions />
+
               <Partners />
               <Testimonials />
               <ContactUs />
