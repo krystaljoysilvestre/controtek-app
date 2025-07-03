@@ -3,9 +3,12 @@ import { device } from "../../constants/devices";
 
 export const Wrapper = styled.div`
   padding: 80px 0px;
+  display: flex;
+  align-items: center;
 
   @media ${device.tablet} {
     padding: 56px 0;
+    height: 540px;
   }
 `;
 
@@ -88,8 +91,12 @@ export const PartnerLogos = styled.div`
   }
 
   @media ${device.mobileL} {
-    margin: 0 -5px;
+    margin: 0;
     justify-content: center;
     gap: 40px 56px;
+  }
+
+  @media ${device.laptop} {
+    margin: 0 30px;
   }
 `;

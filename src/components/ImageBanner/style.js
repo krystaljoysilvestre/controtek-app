@@ -4,6 +4,7 @@ import { device } from "../../constants/devices";
 export const Wrapper = styled.div`
   max-height: 380px;
   overflow: hidden;
+  background-color: ${(props) => props.backgroundColor || "#fff"};
 
   @media (min-width: 991px) {
     height: 300px;

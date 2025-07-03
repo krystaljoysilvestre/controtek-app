@@ -1,15 +1,18 @@
 import { useRef, useState } from "react";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import sectionDivider from "./assets/images/section-divider.jpg";
+import sectionDividerSm from "./assets/images/section-divider_mobile.jpg";
+import sectionDivider1 from "./assets/images/section-divider-1.jpg";
+import sectionDivider1Sm from "./assets/images/section-divider-1_mobile.jpg";
 import { device } from "./constants/devices";
-import useIsMobile from "./hooks/isMobile";
 import GlobalStyle from "./styles/globalStyle";
 
 import {
   Header,
   Sidebar,
   HeroBanner,
-  IntroBlock,
   About,
   ImageBanner,
   CarouselText,
@@ -33,7 +36,6 @@ const SidebarContainer = styled(SwiperSlide)`
 
 function App() {
   const swiperRef = useRef(null);
-  const isMobile = useIsMobile();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const onToggleSidebar = () => {
@@ -69,27 +71,21 @@ function App() {
           <HeroBanner />
           <Solutions />
           <Clients />
-          <IntroBlock />
-          {isMobile ? (
-            <>
-              <About />
-              <ImageBanner />
-              <CarouselText />
-              <Partners />
-              <Testimonials />
-              <ContactUs />
-            </>
-          ) : (
-            <>
-              <About />
-              <ImageBanner />
-              <CarouselText />
-
-              <Partners />
-              <Testimonials />
-              <ContactUs />
-            </>
-          )}
+          <ImageBanner
+            bgColor="#f1f1f1"
+            desktopImg={sectionDivider}
+            mobileImg={sectionDividerSm}
+          />
+          <CarouselText />
+          <About />
+          <Testimonials />
+          <ImageBanner
+            bgColor="#52E2C8"
+            desktopImg={sectionDivider1}
+            mobileImg={sectionDivider1Sm}
+          />
+          <Partners />
+          <ContactUs />
           <Footer />
         </SwiperSlide>
         <SidebarContainer>

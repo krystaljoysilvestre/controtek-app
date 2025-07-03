@@ -1,5 +1,3 @@
-import { ReactComponent as Beckhoff } from "../../assets/images/partners/beckhoff.svg";
-import { ReactComponent as EndressHauser } from "../../assets/images/partners/eh.svg";
 import { ReactComponent as HmsEwon } from "../../assets/images/partners/hms-ewon.svg";
 import { ReactComponent as AdelSystem } from "../../assets/images/partners/adelsystem.svg";
 import { ReactComponent as SPM } from "../../assets/images/partners/spm.svg";
@@ -38,8 +36,6 @@ const Partners = () => {
             </Paragraph>
           </Heading>
           <PartnerLogos>
-            <Beckhoff />
-            <EndressHauser />
             <HmsEwon />
             <AdelSystem />
             <SPM />

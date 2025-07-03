@@ -7,6 +7,7 @@ import {
   Paper,
   Content,
   Title,
+  Subheader,
   Background,
   DesktopImage,
   MobileImageContainer,
@@ -21,6 +22,9 @@ const About = () => {
           <Paper>
             <Content>
               <Title>ABOUT US</Title>
+              <Subheader>
+                Let’s build the future of automation together
+              </Subheader>
               <p>
                 Founded in 2012, Controtek is a trusted system integrator
                 specializing in automation, engineering, and software
@@ -40,25 +44,6 @@ const About = () => {
                 Backed by experts, we provide scalable solutions from
                 machine-level control to full industrial integration.
               </p>
-              <MobileImageContainer>
-                <MobileImage
-                  src={aboutBgSm}
-                  alt="About Contratek"
-                  loading="lazy"
-                />
-              </MobileImageContainer>
-              <p>
-                Beyond automation, our innovations also impact lives by making
-                workplaces safer, reducing risks, and improving daily
-                operations. From preventing equipment failures to enhancing
-                workplace security, our systems ensure that organizations
-                operate smoothly and responsibly.
-              </p>
-              <p>
-                With resilience and innovation driving us forward, Controtek is
-                not just building better industries—we’re creating a better,
-                safer future for all.
-              </p>
             </Content>
             <Background>
               <DesktopImage
@@ -68,6 +53,9 @@ const About = () => {
               />
             </Background>
           </Paper>
+          <MobileImageContainer>
+            <MobileImage src={aboutBgSm} alt="About Contratek" loading="lazy" />
+          </MobileImageContainer>
         </Row>
       </Container>
     </Wrapper>

@@ -127,6 +127,14 @@ export const Center = styled.div`
   justify-content: center;
   align-items: center;
   height: 360px;
+
+  @media ${device.tablet} {
+    height: 450px;
+  }
+
+  @media ${device.laptop} {
+    height: 540px;
+  }
 `;
 
 export const Container = styled.div`
